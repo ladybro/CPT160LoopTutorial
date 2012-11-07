@@ -50,6 +50,29 @@ int main(int argc, char** argv) {
       total += count; //equivalent to total = total + count
       // the inverse of above total -= count with would be equivalent to total = total - count
     }
+
+  /*
+   * while loop -- good for an unknown number of iterations - a condition controlled loop
+   * 
+   * must have a conditional statement that can be false at some point
+   *
+   * pattern: while (condition){
+   *  statements that can invalidate the above condition
+   * }
+   * Use caution with while loops it is very easy to enter into an infinite loop
+   */
+  // look while cond == true
+  boolean cond = true;
+  sum = 0;
+  // cond starts as true
+  while (cond){
+    // accumulates sum by adding 1 to it
+    sum += 1;
+    if (sum > 100){
+      // at this point cond will be false after the loop has iterated 100 times
+      cond = false;
+    }
+  }
   //Statemts like a trying or a variable are seperates during output by the output stream operator <<
   cout << "The sum of numbers between 1 and " << number << " equals " << total;
   return 0;
